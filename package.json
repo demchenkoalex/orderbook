@@ -1,0 +1,68 @@
+{
+  "name": "orderbook",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "compile": "tsc -p .",
+    "ios": "react-native run-ios",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "start": "react-native start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-native": "^0.64.0",
+    "sorted-btree": "^1.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/runtime": "^7.13.17",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/react-hooks": "^5.1.2",
+    "@testing-library/react-native": "^7.2.0",
+    "@types/jest": "^26.0.23",
+    "@types/react-native": "^0.64.4",
+    "@types/react-test-renderer": "^17.0.1",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.25.0",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "jest": "^26.6.3",
+    "jest-websocket-mock": "^2.2.0",
+    "metro-react-native-babel-preset": "^0.66.0",
+    "mock-socket": "^9.0.3",
+    "react-test-renderer": "^17.0.2",
+    "typescript": "^4.2.4"
+  },
+  "resolutions": {
+    "@types/react": "^17"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!**/index.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "preset": "react-native",
+    "setupFiles": [
+      "./jest/setup.ts"
+    ]
+  }
+}
