@@ -33,14 +33,14 @@ const AppContainer = () => {
     setLoading(false)
   }
 
-  const handleError = (e: WebSocketErrorEvent) => {
+  const handleError = (e: { message?: string }) => {
     resetData()
     setClosed(true)
     setError(e.message)
     setLoading(false)
   }
 
-  const handleMessage = (e: WebSocketMessageEvent) => {
+  const handleMessage = (e: { data?: any }) => {
     /* istanbul ignore next: not possible to send undefined data using WebSocket mock library */
     const data = JSON.parse(e.data ?? '')
 

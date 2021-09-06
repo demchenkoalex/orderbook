@@ -41,10 +41,10 @@ const App = ({ asks, bids }: Props) => {
   }
 
   const renderBids = () => {
-    return bids.toArray(numberOfRows - 1).map((bid, index, array) => {
-      const total = array
-        .slice(0, index)
-        .reduce((acc, curr) => acc + curr[1], bid[1])
+    let total = 0
+
+    return bids.toArray(numberOfRows - 1).map((bid, index) => {
+      total += bid[1]
 
       if (index === numberOfRows - 1) {
         totalBidsRef.current = total
